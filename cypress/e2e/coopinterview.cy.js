@@ -33,6 +33,11 @@ describe("Interview test", () => {
   });
   it("Visits coop bank page investor relations and selects ", () => {
     cy.visit("https://www.co-opbank.co.ke/");
+    cy.get("#menu-item-749 > a").click();
+    cy.get(
+      '[href="https://www.co-opbank.co.ke/investor_categories/press-releases/"]'
+    ).click();
+    cy.get(".sf-input-select").select(10);
   });
 });
 
